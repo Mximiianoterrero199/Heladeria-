@@ -1,0 +1,103 @@
+/* Dark mode para Navbar */
+body.dark nav.navbar {
+  background-color: #2c2c2c;
+  border-bottom: 3px solid #f4a940;
+}
+
+body.dark nav.navbar .navbar-brand {
+  color: #ff99cc;
+}
+
+body.dark nav.navbar .nav-link {
+  color: #f0e9e9;
+}
+
+body.dark nav.navbar .nav-link:hover,
+body.dark nav.navbar .nav-link:focus {
+  color: #f4a940;
+}
+
+body.dark nav.navbar .btn-darkmode {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark nav.navbar .btn-darkmode:hover {
+  background-color: #f4a940;
+  color: #1f1f1f;
+}
+
+/* Dark mode para sección productos */
+body.dark section#productos {
+  background-color: #2a2a2a;
+}
+
+body.dark #productos h2 {
+  color: #f0e9e9;
+  text-shadow: 1px 1px 3px rgba(244, 169, 64, 0.6);
+}
+
+body.dark #productos .card {
+  background-color: #333;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.dark #productos .card-body {
+  color: #f0e9e9;
+}
+
+/* Dark mode para testimonios */
+body.dark section.testimonios {
+  background-color: #2a2a2a;
+}
+
+body.dark section.testimonios h3 {
+  color: #f0e9e9;
+}
+
+body.dark .carousel-item p {
+  color: #ccc;
+}
+
+/* Dark mode para suscripción */
+body.dark section.suscripcion {
+  background-color: #2c2c2c;
+}
+
+body.dark section.suscripcion h4 {
+  color: #f0e9e9;
+}
+
+body.dark section.suscripcion input[type="email"] {
+  background-color: #3a3a3a;
+  color: #fff;
+  border-color: #f4a940;
+}
+
+body.dark section.suscripcion button {
+  background-color: #f4a940;
+  color: #1f1f1f;
+}
+
+/* Dark mode para contacto */
+body.dark section.contacto {
+  background-color: #2a2a2a;
+}
+
+body.dark section.contacto h4 {
+  color: #f0e9e9;
+}
+
+body.dark section.contacto input,
+body.dark section.contacto textarea {
+  background-color: #3a3a3a;
+  color: #fff;
+  border-color: #f4a940;
+}
+
+
+
+body.dark footer {
+  background-color: #2b2b2b;
+  color: #f0e9e9;
+}
