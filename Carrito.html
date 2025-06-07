@@ -53,6 +53,10 @@
       color: #5c3b00;
       text-align: center;
     }
+
+    #btn-limpiar, #btn-vaciar-carrito {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -74,28 +78,28 @@
           <th>Total</th>
         </tr>
       </thead>
-      <tbody id="tablaHistorial">
-        <!-- Historial simulado -->
-        <tr>
-          <td>01/06/2025</td>
-          <td>Helado de Vainilla</td>
-          <td>2</td>
-          <td>$6.000</td>
-        </tr>
-        <tr>
-          <td>15/05/2025</td>
-          <td>Helado de Fresa</td>
-          <td>1</td>
-          <td>$3.000</td>
-        </tr>
-        <tr>
-          <td>10/05/2025</td>
-          <td>Helado de Chocolate</td>
-          <td>3</td>
-          <td>$9.000</td>
-        </tr>
-      </tbody>
+      <tbody id="tablaHistorial"></tbody>
     </table>
+
+    <h2 class="text-center mt-5" data-aos="fade-up">Carrito</h2>
+
+    <table class="table table-striped table-hover" data-aos="fade-up" data-aos-delay="200">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Total</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="tablaCarrito"></tbody>
+    </table>
+
+    <div class="text-center">
+      <button id="btn-vaciar-carrito" class="btn btn-warning">Vaciar carrito</button>
+      <button id="btn-limpiar" class="btn btn-danger">Borrar historial</button>
+    </div>
   </div>
 
   <footer>
@@ -105,14 +109,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-  AOS.init();
-function mostrarHistorial() {
-      const historial = JSON.parse(localStorage.getItem("historialCompras")) || [];
-      const tbody = document.getElementById("tabla-historial");
-      tbody.innerHTML = ""; // Limpiar tabla
+    AOS.init();
 
-      if(historial.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="4" class="text-center">No hay compras aún.</td></tr>`;
+    function mostrarHistorial() {
+      const historial = JSON.parse(localStorage.getItem("historialCompras")) || [];
+      const tbody = document.getElementById("tablaHistorial");
+      if (!tbody) return;
+
+      tbody.innerHTML = "";
+
+      if (historial.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="4" class="text-center">No hay compras registradas aún.</td></tr>`;
         return;
       }
 
@@ -122,21 +129,75 @@ function mostrarHistorial() {
           <td>${compra.fecha}</td>
           <td>${compra.nombre}</td>
           <td>${compra.cantidad}</td>
-          <td>${(compra.total / 100).toFixed(2)} ₡</td>
+          <td>$${compra.total.toLocaleString('es-ES')}</td>
         `;
         tbody.appendChild(tr);
       });
     }
 
-    document.getElementById("btn-limpiar").addEventListener("click", () => {
-      if(confirm("¿Quieres borrar todo el historial?")) {
-        localStorage.removeItem("historialCompras");
-        mostrarHistorial();
-      }
-    });
+    function mostrarCarrito() {
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      const tbody = document.getElementById("tablaCarrito");
+      if (!tbody) return;
 
-    // Mostrar historial al cargar la página
-    mostrarHistorial();
+      tbody.innerHTML = "";
+
+      if (carrito.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5" class="text-center">Tu carrito está vacío.</td></tr>`;
+        return;
+      }
+
+      carrito.forEach(item => {
+        const tr = document.createElement("tr");
+        const total = item.precio * item.cantidad;
+
+        tr.innerHTML = `
+          <td>${item.nombre}</td>
+          <td>${item.cantidad}</td>
+          <td>$${item.precio.toFixed(2)}</td>
+          <td>$${total.toFixed(2)}</td>
+          <td><button class="btn btn-danger btn-sm btn-eliminar">Eliminar</button></td>
+        `;
+
+        tr.querySelector(".btn-eliminar").addEventListener("click", () => {
+          eliminarDelCarrito(item.nombre);
+        });
+
+        tbody.appendChild(tr);
+      });
+    }
+
+    function eliminarDelCarrito(nombreProducto) {
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito = carrito.filter(item => item.nombre !== nombreProducto);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      mostrarCarrito();
+    }
+
+    const btnLimpiarHistorial = document.getElementById("btn-limpiar");
+    if (btnLimpiarHistorial) {
+      btnLimpiarHistorial.addEventListener("click", () => {
+        if (confirm("¿Quieres borrar todo el historial?")) {
+          localStorage.removeItem("historialCompras");
+          mostrarHistorial();
+        }
+      });
+    }
+
+    const btnVaciarCarrito = document.getElementById("btn-vaciar-carrito");
+    if (btnVaciarCarrito) {
+      btnVaciarCarrito.addEventListener("click", () => {
+        if (confirm("¿Quieres vaciar el carrito completo?")) {
+          localStorage.removeItem("carrito");
+          mostrarCarrito();
+        }
+      });
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      mostrarHistorial();
+      mostrarCarrito();
+    });
   </script>
 </body>
 </html>
