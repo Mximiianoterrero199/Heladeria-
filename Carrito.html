@@ -97,6 +97,10 @@
       </tbody>
     </table>
   </div>
+  <div class="text-center mt-3">
+  <button id="btn-limpiar" class="btn btn-danger">Limpiar carrito</button>
+</div>
+
 
   <footer>
     &copy; 2025 Lomoro. Todos los derechos reservados.
@@ -106,37 +110,42 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
   AOS.init();
-function mostrarHistorial() {
-      const historial = JSON.parse(localStorage.getItem("historialCompras")) || [];
-      const tbody = document.getElementById("tabla-historial");
-      tbody.innerHTML = ""; // Limpiar tabla
 
-      if(historial.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="4" class="text-center">No hay compras aún.</td></tr>`;
-        return;
-      }
+  function mostrarHistorial() {
+    const historial = JSON.parse(localStorage.getItem("historialCompras")) || [];
+    const tbody = document.getElementById("tablaHistorial");
+    tbody.innerHTML = "";
 
-      historial.forEach(compra => {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td>${compra.fecha}</td>
-          <td>${compra.nombre}</td>
-          <td>${compra.cantidad}</td>
-          <td>${(compra.total / 100).toFixed(2)} ₡</td>
-        `;
-        tbody.appendChild(tr);
-      });
+    if(historial.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="4" class="text-center">No hay compras aún.</td></tr>`;
+      return;
     }
 
-    document.getElementById("btn-limpiar").addEventListener("click", () => {
-      if(confirm("¿Quieres borrar todo el historial?")) {
-        localStorage.removeItem("historialCompras");
-        mostrarHistorial();
-      }
+    historial.forEach(compra => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${compra.fecha}</td>
+        <td>${compra.nombre}</td>
+        <td>${compra.cantidad}</td>
+        <td>$${compra.total.toLocaleString("es-AR")}</td>
+      `;
+      tbody.appendChild(tr);
     });
+  }
 
-    // Mostrar historial al cargar la página
+  document.addEventListener("DOMContentLoaded", () => {
     mostrarHistorial();
+
+    const btnLimpiar = document.getElementById("btn-limpiar");
+    if (btnLimpiar) {
+      btnLimpiar.addEventListener("click", () => {
+        if (confirm("¿Quieres borrar todo el historial?")) {
+          localStorage.removeItem("historialCompras");
+          mostrarHistorial();
+        }
+      });
+    }
+  });
   </script>
 </body>
 </html>
