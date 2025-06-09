@@ -506,6 +506,69 @@ body.dark [data-aos] {
   opacity: 0.9;
 }
 
+/* Mantener el logo LOMORO en rosa en modo oscuro */
+body.dark nav.navbar .navbar-brand {
+  color: #ff007f !important;
+}
+
+/* Comentarios (sección testimionios) en modo oscuro */
+body.dark section.testimonios {
+  background-color: var(--card-bg) !important;
+}
+body.dark section.testimonios h3 {
+  color: var(--fg) !important;
+}
+body.dark .carousel-item {
+  background-color: #333 !important;
+  border-radius: 15px;
+}
+body.dark .carousel-item p {
+  color: var(--fg) !important;
+}
+body.dark .carousel-item strong {
+  color: #f4a940 !important;
+}
+body.dark .carousel-control-prev-icon,
+body.dark .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+
+
+/* Variables ya definidas en modo oscuro:
+   --bg:    #1f1f1f  (fondo global)
+   --fg:    #e0e0e0  (texto claro)
+   --card-bg: #2a2a2a (fondo de las cards) 
+*/
+
+/* Secciones (productos, comentarios, suscripción, contacto, footer…) con fondo UNIFORME */
+body.dark section#productos,
+body.dark section.testimonios,
+body.dark section.suscripcion,
+body.dark section.contacto,
+body.dark footer {
+  background-color: var(--bg) !important;
+}
+
+/* Títulos de sección en modo oscuro */
+body.dark #productos h2,
+body.dark section.testimonios h3,
+body.dark section.suscripcion h4,
+body.dark section.contacto h4 {
+  color: var(--fg) !important;
+}
+
+/* Mantener las cards con su gris más claro */
+body.dark .card {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border);
+}
+
+/* Y asegúrate de que el wrapper general (container) también herede */
+body.dark .container {
+  background-color: var(--bg);
+}
+
 
 
 </style>
