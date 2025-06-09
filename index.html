@@ -12,6 +12,7 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="icon" href="logoo.png" type="image/png" />
+ <link rel="stylesheet" href="Css/nav.css">
 
 <style>
 /* General */
@@ -417,6 +418,94 @@ transition: background-color 0.3s ease;
 background-color: #128c4a;
 box-shadow: 0 10px 25px rgba(18, 140, 74, 0.8);
 }
+/* MODO OSCURO GLOBAL */
+body.dark {
+  --bg: #1f1f1f;
+  --fg: #e0e0e0;
+  --card-bg: #2a2a2a;
+  --border: #444;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+/* Navbar */
+body.dark nav.navbar {
+  background-color: #2a2a2a;
+  border-bottom-color: var(--border);
+}
+body.dark nav.navbar .nav-link,
+body.dark nav.navbar .navbar-brand {
+  color: var(--fg);
+}
+body.dark nav.navbar .nav-link:hover {
+  color: #f4a940;
+}
+
+/* Hero (sólo superposición, mantiene tu imagen) */
+body.dark .hero::before {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Secciones con fondo claro original */
+body.dark section#productos,
+body.dark section.testimonios,
+body.dark section.suscripcion,
+body.dark section.contacto {
+  background-color: var(--card-bg);
+}
+body.dark #productos h2,
+body.dark section.testimonios h3,
+body.dark section.suscripcion h4,
+body.dark section.contacto h4 {
+  color: var(--fg);
+}
+
+/* Tarjetas y botones */
+body.dark .card {
+  background-color: var(--card-bg);
+  border-color: var(--border);
+}
+body.dark .card-body {
+  color: var(--fg);
+}
+body.dark .btn-warning {
+  background-color: #f4a940;
+  color: #1f1f1f;
+}
+body.dark .btn-warning:hover {
+  background-color: #d99400;
+  color: #fff;
+}
+
+/* Footer */
+body.dark footer {
+  background-color: #2a2a2a;
+  color: var(--fg);
+  border-top-color: var(--border);
+}
+
+/* Botón WhatsApp flotante */
+body.dark .btn-whatsapp {
+  box-shadow: 0 6px 15px rgba(255,255,255,0.2);
+}
+
+/* Inputs y formularios */
+body.dark input,
+body.dark textarea {
+  background-color: #333;
+  color: var(--fg);
+  border-color: var(--border);
+}
+body.dark input:focus,
+body.dark textarea:focus {
+  box-shadow: 0 0 10px #f4a940aa;
+}
+
+/* AOS elements (si quieres) */
+body.dark [data-aos] {
+  opacity: 0.9;
+}
+
 
 
 </style>
@@ -492,6 +581,28 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 </div>
 </div>
 </div>
+<div class="col-sm-6 col-md-4 col-lg-3">
+<div class="card" data-aos="zoom-in" data-aos-delay="100">
+<img src="chocolate.png" class="card-img-top helado-img" alt="Helado Chocolate" />
+<div class="card-body">
+<h5 class="card-title">Helado Chocolate</h5>
+<p class="card-text">Sabor intenso y cremoso de chocolate premium.</p>
+<button class="btn btn-warning w-100">Añadir al carrito</button>
+</div>
+</div>
+</div>
+  </div> <!-- cierra tu .row g-4 -->
+</div> <!-- cierra tu .row g-4 -->
+
+<!-- Botón "Más productos" -->
+<div class="text-center my-5" data-aos="fade-up">
+  <a href="producto.html" class="btn btn-warning w-48 ">Más productos</a>
+</div>
+</section>
+
+
+
+
 <!-- Agrega más productos según necesites -->
 </div>
 </section>
