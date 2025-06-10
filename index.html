@@ -569,6 +569,42 @@
     background-color: var(--bg);
   }
 
+.footer {
+  background-color: #ffcce0;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.footer-qr {
+  position: absolute;
+  left: 20px;
+}
+
+.footer-qr .qr-img {
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #000;
+  font-size: 1.2rem;
+}
 
 
   </style>
@@ -730,15 +766,23 @@
 
 
   <!-- Footer -->
-  <footer>
-  <div class="social-icons">
-  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-  <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-  <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-qr">
+      <img src="whatsapp_qr.png" alt="QR Lomoro" class="qr-img">
+    </div>
+    <div class="footer-content text-center">
+      <p class="mb-1">© 2025 Lomoro. Todos los derechos reservados.</p>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-whatsapp"></i></a>
+      </div>
+    </div>
   </div>
-  <p>&copy; 2025 Lomoro. Todos los derechos reservados.</p>
-  </footer>
+</footer>
+
 
   <!-- Botón WhatsApp flotante -->
   <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" aria-label="WhatsApp">
