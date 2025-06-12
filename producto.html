@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Aca llama al css, para no tener que escribir todo el estilo en el codigo, se ve mas ordenado -->
-    <link rel="stylesheet" href="Css/nav.css">
-    <link rel="icon" href="logoo.png" type="image/png" />
-  </head>
-  <body>
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="Css/nav.css" />
+  <link rel="icon" href="logoo.png" type="image/png" />
+</head>
+<body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg" id="colorOsc">
     <div class="container">
       <a class="navbar-brand" href="index.html">LOMORO</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -38,197 +43,214 @@
           <li class="nav-item"><a class="nav-link" href="#suscripcion">Suscripción</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
           <li class="nav-item">
-            <button class="btn btn-darkmode" id="toggleDarkMode" aria-label="Cambiar modo oscuro">🌙</button>
+            <button
+              class="btn btn-darkmode"
+              id="toggleDarkMode"
+              aria-label="Cambiar modo oscuro"
+            >
+              🌙
+            </button>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Productos -->
-  <section id="productos" class="container">
-    <h2>HELADOS</h2>
-    <div class="row g-4">
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in">
-          <img src="vainilla.png" class="card-img-top helado-img" alt="Helado Vainilla" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Vainilla</h5>
-            <p class="card-text">Delicioso helado de vainilla con ingredientes naturales.</p>
-             <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Vainilla,1500')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="chocolate.png" class="card-img-top helado-img" alt="Helado Chocolate" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Chocolate</h5>
-            <p class="card-text">Sabor intenso y cremoso de chocolate premium.</p>
-            <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Chocolate,1500')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Fresa</h5>
-           <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
 
-      <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>
-          </div>
+<section id="productos" class="container">
+  <h2>HELADOS</h2>
+  <div class="row g-4">
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in">
+        <img src="vainilla.png" class="card-img-top helado-img" alt="Helado Vainilla" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Vainilla</h5>
+          <p class="card-text">Delicioso helado de vainilla con ingredientes naturales.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Vainilla,1500')">Añadir al carrito</button>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Fresa</h5>
-           <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
-
-            <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <!-- Agrega más productos según necesites -->
     </div>
-     <h2>POSTRES CON HELADO</h2>
-    <div class="row g-4">
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in">
-          <img src="CopaOreo.jpg" class="card-img-top helado-img" alt="Helado Vainilla" />
-          <div class="card-body">
-            <h5 class="card-title">Copa Oreo</h5>
-            <p class="card-text">Helado cremoso con trozos de galletita Oreo.</p>
-            <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Copa Oreo,1600')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="CopaBananaSplit.jpg" class="card-img-top helado-img" alt="Helado Chocolate" />
-          <div class="card-body">
-            <h5 class="card-title">Copa Banana Split</h5>
-            <p class="card-text">Banana, helado, salsa y crema… ¡el clásico nunca falla!</p>
-           <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Copa Banana Split,2000')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="CopaBrownie.jpg" class="card-img-top helado-img" alt="Helado Fresa" />
-          <div class="card-body">
-            <h5 class="card-title">Copa Brownie</h5>
-           <p class="card-text">Brownie tibio con helado encima, un contraste irresistible.</p>
-             <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Copa Brownie,1900')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="sundae.jpg" class="card-img-top helado-img" alt="Helado Fresa" />
-          <div class="card-body">
-            <h5 class="card-title">Sundae (chocolate o frutilla)</h5>
-           <p class="card-text">Helado con salsa, crema y toppings, al estilo americano.</p>
 
-            <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Sundae Chocolate/Frutilla,1700')">Añadir al carrito</button>
-          </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="chocolate.png" class="card-img-top helado-img" alt="Helado Chocolate" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Chocolate</h5>
+          <p class="card-text">Sabor intenso y cremoso de chocolate premium.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Chocolate,1500')">Añadir al carrito</button>
         </div>
       </div>
-      <!-- Agrega más productos según necesites -->
     </div>
-     <h2>BEBIDAS FRIAS</h2>
-    <div class="row g-4">
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in">
-          <img src="vainilla.png" class="card-img-top helado-img" alt="Helado Vainilla" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Vainilla</h5>
-            <p class="card-text">Delicioso helado de vainilla con ingredientes naturales.</p>
-           <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Vainilla,1500')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="chocolate.png" class="card-img-top helado-img" alt="Helado Chocolate" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Chocolate</h5>
-            <p class="card-text">Sabor intenso y cremoso de chocolate premium.</p>
-            <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Chocolate,1500')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Fresa</h5>
-           <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
 
-           <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>
-          </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Fresa</h5>
+          <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Fresa</h5>
-           <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
-           <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <!-- Agrega más productos según necesites -->
     </div>
-     <h2>TOPPINGS Y EXTRAS</h2>
-    <div class="row g-4">
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in">
-          <img src="vainilla.png" class="card-img-top helado-img" alt="Helado Vainilla" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Vainilla</h5>
-            <p class="card-text">Delicioso helado de vainilla con ingredientes naturales.</p>
-           <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Vainilla,1500')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="chocolate.png" class="card-img-top helado-img" alt="Helado Chocolate" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Chocolate</h5>
-            <p class="card-text">Sabor intenso y cremoso de chocolate premium.</p>
-           <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Chocolate,1500')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Fresa</h5>
-           <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
-           <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
 
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" />
-          <div class="card-body">
-            <h5 class="card-title">Helado Fresa</h5>
-           <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
-            <button class="btn btn-warning w-100"  onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>>
-          </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Fresa</h5>
+          <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>
         </div>
       </div>
-      <!-- Agrega más productos según necesites -->
     </div>
-  </section>
+  </div>
+
+  <h2>POSTRES CON HELADO</h2>
+  <div class="row g-4">
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in">
+        <img src="CopaOreo.jpg" class="card-img-top helado-img" alt="Copa Oreo" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Copa Oreo</h5>
+          <p class="card-text">Helado cremoso con trozos de galletita Oreo.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Copa Oreo,1600')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="CopaBananaSplit.jpg" class="card-img-top helado-img" alt="Copa Banana Split" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Copa Banana Split</h5>
+          <p class="card-text">Banana, helado, salsa y crema… ¡el clásico nunca falla!</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Copa Banana Split,2000')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="CopaBrownie.jpg" class="card-img-top helado-img" alt="Copa Brownie" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Copa Brownie</h5>
+          <p class="card-text">Brownie tibio con helado encima, un contraste irresistible.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Copa Brownie,1900')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="sundae.jpg" class="card-img-top helado-img" alt="Sundae" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Sundae (chocolate o frutilla)</h5>
+          <p class="card-text">Helado con salsa, crema y toppings, al estilo americano.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Sundae Chocolate/Frutilla,1700')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>BEBIDAS FRIAS</h2>
+  <div class="row g-4">
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in">
+        <img src="vainilla.png" class="card-img-top helado-img" alt="Helado Vainilla" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Vainilla</h5>
+          <p class="card-text">Delicioso helado de vainilla con ingredientes naturales.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Vainilla,1500')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="chocolate.png" class="card-img-top helado-img" alt="Helado Chocolate" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Chocolate</h5>
+          <p class="card-text">Sabor intenso y cremoso de chocolate premium.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Chocolate,1500')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Fresa</h5>
+          <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Fresa</h5>
+          <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>TOPPINGS Y EXTRAS</h2>
+  <div class="row g-4">
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in">
+        <img src="vainilla.png" class="card-img-top helado-img" alt="Helado Vainilla" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Vainilla</h5>
+          <p class="card-text">Delicioso helado de vainilla con ingredientes naturales.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Vainilla,1500')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="chocolate.png" class="card-img-top helado-img" alt="Helado Chocolate" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Chocolate</h5>
+          <p class="card-text">Sabor intenso y cremoso de chocolate premium.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Chocolate,1500')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Fresa</h5>
+          <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="fresa.png" class="card-img-top helado-img" alt="Helado Fresa" loading="lazy" />
+        <div class="card-body">
+          <h5 class="card-title">Helado Fresa</h5>
+          <p class="card-text">Fresco, suave y frutal, hecho con auténticas fresas naturales.</p>
+          <button class="btn btn-warning w-100" onclick="agregarAlHistorial('Helado de Fresa,1500')">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Puedes continuar agregando las secciones Bebidas Frias y Toppings y Extras con el mismo patrón -->
+
+
+
   <!-- Footer -->
   <footer>
     <div class="social-icons">
@@ -241,67 +263,113 @@
   </footer>
 
   <!-- Botón WhatsApp flotante -->
-  <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" aria-label="WhatsApp">
+  <a
+    href="https://wa.me/1234567890"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn-whatsapp"
+    aria-label="WhatsApp"
+  >
     <i class="bi bi-whatsapp"></i>
   </a>
+
+  <!-- Scripts externos -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Script modularizado -->
   <script>
-    AOS.init();
+    const App = (() => {
+      // Modo oscuro
+      const toggleDarkModeBtn = document.getElementById('toggleDarkMode');
+      const initDarkMode = () => {
+        if (localStorage.getItem('modoOscuro') === 'activo') {
+          document.body.classList.add('dark');
+          toggleDarkModeBtn.textContent = '☀️';
+        } else {
+          toggleDarkModeBtn.textContent = '🌙';
+        }
+        toggleDarkModeBtn.addEventListener('click', () => {
+          document.body.classList.toggle('dark');
+          if (document.body.classList.contains('dark')) {
+            localStorage.setItem('modoOscuro', 'activo');
+            toggleDarkModeBtn.textContent = '☀️';
+          } else {
+            localStorage.setItem('modoOscuro', 'inactivo');
+            toggleDarkModeBtn.textContent = '🌙';
+          }
+        });
+      };
 
-    // Modo oscuro toggle
-    const toggleBtn = document.getElementById('toggleDarkMode');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      toggleBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+      // Formularios validación
+      const initFormValidation = () => {
+        // Suscripción
+        const formSuscripcion = document.getElementById('formSuscripcion');
+        if (formSuscripcion) {
+          formSuscripcion.addEventListener('submit', e => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value.trim();
+            if (!email || !email.includes('@')) {
+              alert('Por favor ingresa un correo válido.');
+              return;
+            }
+            alert('¡Gracias por suscribirte!');
+            e.target.reset();
+          });
+        }
+
+        // Contacto
+        const formContacto = document.getElementById('formContacto');
+        if (formContacto) {
+          formContacto.addEventListener('submit', e => {
+            e.preventDefault();
+            const nombre = e.target.querySelector('input[type="text"]').value.trim();
+            const email = e.target.querySelector('input[type="email"]').value.trim();
+            const mensaje = e.target.querySelector('textarea').value.trim();
+            if (!nombre || !email.includes('@') || !mensaje) {
+              alert('Por favor completa todos los campos correctamente.');
+              return;
+            }
+            alert('¡Mensaje enviado! Te responderemos pronto.');
+            e.target.reset();
+          });
+        }
+      };
+
+      // Agregar producto al historial
+      const agregarAlHistorial = (producto) => {
+        const historial = JSON.parse(localStorage.getItem('historialCompras')) || [];
+        historial.push({
+          producto,
+          fecha: new Date().toLocaleString(),
+        });
+        localStorage.setItem('historialCompras', JSON.stringify(historial));
+        alert('Producto añadido al carrito: ' + producto);
+      };
+
+      // Inicializar AOS
+      const initAOS = () => {
+        AOS.init();
+      };
+
+      // Inicializar todo
+      const init = () => {
+        initDarkMode();
+        initFormValidation();
+        initAOS();
+      };
+
+      return {
+        init,
+        agregarAlHistorial, // Exponemos esta función para usar en inline onclick
+      };
+    })();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      App.init();
     });
-
-    // Suscripción simple validación
-    document.getElementById('formSuscripcion').addEventListener('submit', e => {
-      e.preventDefault();
-      const email = e.target.querySelector('input[type="email"]').value.trim();
-      if (!email || !email.includes('@')) {
-        alert('Por favor ingresa un correo válido.');
-        return;
-      }
-      alert('¡Gracias por suscribirte!');
-      e.target.reset();
-    });
-
-    // Contacto simple validación
-    document.getElementById('formContacto').addEventListener('submit', e => {
-      e.preventDefault();
-      const nombre = e.target.querySelector('input[type="text"]').value.trim();
-      const email = e.target.querySelector('input[type="email"]').value.trim();
-      const mensaje = e.target.querySelector('textarea').value.trim();
-      if (!nombre || !email.includes('@') || !mensaje) {
-        alert('Por favor completa todos los campos correctamente.');
-        return;
-      }
-      alert('¡Mensaje enviado! Te responderemos pronto.');
-      e.target.reset();
-    });
-
-
-   
- function agregarAlHistorial(producto) {
-    // Obtener historial actual o crear uno nuevo
-    let historial = JSON.parse(localStorage.getItem("historialCompras")) || [];
-
-    // Agregar el nuevo producto
-    historial.push({
-      producto: producto,
-      fecha: new Date().toLocaleString()
-    });
-
-    // Guardar de nuevo en localStorage
-    localStorage.setItem("historialCompras", JSON.stringify(historial));
-
-    // Confirmación visual opcional
-    alert("Producto añadido al carrito: " + producto);
-  }
-
-
+    // Para que onclick en botones pueda llamar a esta función sin ser global:
+    window.agregarAlHistorial = App.agregarAlHistorial;
   </script>
 </body>
 </html>

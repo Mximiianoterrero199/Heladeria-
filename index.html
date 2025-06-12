@@ -1020,26 +1020,30 @@ body {
   AOS.init();
 
 
-  
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.getElementById('toggleDarkMode');
 
-    // Aplicar modo oscuro si estaba activo en localStorage
-    if (localStorage.getItem('modoOscuro') === 'activo') {
-      document.body.classList.add('dark');
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('toggleDarkMode');
+
+  // Aplicar modo oscuro si estaba activo en localStorage
+  if (localStorage.getItem('modoOscuro') === 'activo') {
+    document.body.classList.add('dark');
+    toggleBtn.textContent = '☀️';
+  } else {
+    toggleBtn.textContent = '🌙';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+
+    if (document.body.classList.contains('dark')) {
+      localStorage.setItem('modoOscuro', 'activo');
+      toggleBtn.textContent = '☀️';
+    } else {
+      localStorage.setItem('modoOscuro', 'inactivo');
+      toggleBtn.textContent = '🌙';
     }
-
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-
-      if (document.body.classList.contains('dark')) {
-        localStorage.setItem('modoOscuro', 'activo');
-      } else {
-        localStorage.setItem('modoOscuro', 'inactivo');
-      }
-    });
   });
-
+});
 
 
 
